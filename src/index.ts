@@ -1,19 +1,26 @@
-import express from 'express';
-import cors from 'cors';
 import dotenv from 'dotenv';
+import app from './app.js';
+import { sequelize } from './config/database.js';
 
 dotenv.config();
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+let port = 3000;
+if (process.env.PORT) {
+  port = Number(process.env.PORT);
+}
 
-app.use(cors());
-app.use(express.json());
+const startServer = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Conexión a Neon (PostgreSQL) exitosa.');
 
-app.get('/health', (_req, res) => {
-  res.json({ status: 'ok', message: 'API de Gestión de Camiones funcionando' });
-});
+    app.listen(port, () => {
+      console.log(`Servidor corriendo en http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.error('Error al conectar con la base de datos:', error);
+    process.exit(1);
+  }
+};
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+startServer();

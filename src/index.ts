@@ -4,6 +4,7 @@ import { sequelize } from './config/database.js';
 import './models/Usuario.js';
 import './models/chofer.model.js'
 import './models/ingresos.model.js';
+import './models/camion.models.js';
 
 dotenv.config();
 

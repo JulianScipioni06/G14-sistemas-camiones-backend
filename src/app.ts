@@ -4,6 +4,7 @@ import usuarioRoutes from './routes/usuario.routes.js';
 import choferRoutes from './routes/chofer.route.js';
 import ingresoRoutes from './routes/ingresos.route.js';
 import authRoutes from './routes/auth.routes.js';
+import camionRoute from './routes/camion.route.js';
 
 const app: Express = express();
 
@@ -14,6 +15,8 @@ app.use('/api/v1/usuarios', usuarioRoutes);
 app.use('/api/v1/choferes', choferRoutes);
 app.use('/api/v1/ingresos', ingresoRoutes);
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/camiones', camionRoute);
+
 
 app.get('/api/health', (_req, res) => {
     res.json({ status: 'ok', message: 'API Sistema de Camiones funcionando' });

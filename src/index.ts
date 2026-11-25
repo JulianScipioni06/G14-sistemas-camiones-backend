@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import app from './app.js';
 import { sequelize } from './config/database.js';
+import './models/Usuario.js';
 
 dotenv.config();
 
@@ -13,6 +14,9 @@ const startServer = async () => {
   try {
     await sequelize.authenticate();
     console.log('Conexión a Neon (PostgreSQL) exitosa.');
+    
+    await sequelize.sync({ alter: true });
+    console.log('Tablas sincronizadas correctamente.');
 
     app.listen(port, () => {
       console.log(`Servidor corriendo en http://localhost:${port}`);

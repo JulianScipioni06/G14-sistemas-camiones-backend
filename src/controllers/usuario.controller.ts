@@ -1,6 +1,7 @@
 import type { Request, Response } from 'express';
 import { Op } from 'sequelize';
 import { Usuario } from '../models/Usuario.js';
+import bcrypt from 'bcryptjs';
 
 export const getUsuarios = async (req: Request, res: Response) => {
     try {
@@ -94,16 +95,19 @@ export const createUsuario = async (req: Request, res: Response) => {
         const { usuario, contrasena, rol } = req.body;
 
         if (!usuario || !contrasena || !rol) {
-            res.status(400).json({
-                msg: 'Faltan campos obligatorios (usuario, contrasena, rol)',
-                code: 400,
-            });
-            return;
+        res.status(400).json({
+            msg: 'Faltan campos obligatorios (usuario, contrasena, rol)',
+            code: 400,
+        });
+        return;
         }
+
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(contrasena, salt);
 
         const nuevoUsuario = await Usuario.create({
             usuario,
-            contrasena,
+            contrasena: hashedPassword,
             rol,
         });
 

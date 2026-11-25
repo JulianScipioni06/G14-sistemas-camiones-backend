@@ -5,6 +5,7 @@ import './models/Usuario.js';
 import './models/chofer.model.js'
 import './models/ingresos.model.js';
 import './models/cliente.model.js';
+import './models/gastos.model.js';
 
 dotenv.config();
 

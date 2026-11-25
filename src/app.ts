@@ -3,6 +3,7 @@ import cors from 'cors';
 import usuarioRoutes from './routes/usuario.routes.js';
 import choferRoutes from './routes/chofer.route.js';
 import ingresoRoutes from './routes/ingresos.route.js';
+import gastoRoutes from './routes/gastos.route.js';
 import authRoutes from './routes/auth.routes.js';
 import clienteRoutes from './routes/cliente.route.js';
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use('/api/v1/usuarios', usuarioRoutes);
 app.use('/api/v1/choferes', choferRoutes);
 app.use('/api/v1/ingresos', ingresoRoutes);
+app.use('/api/v1/gastos', gastoRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/clientes', clienteRoutes);
 

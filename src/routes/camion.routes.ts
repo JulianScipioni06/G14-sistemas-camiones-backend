@@ -7,7 +7,7 @@ import {
     deleteCamion,
 } from '../controllers/camion.controller.js';
 import { validarId } from "../middlewares/validarId.js";
-import { validarCamion } from "../middlewares/validarCamion.js";
+import { validarCamion } from "../middlewares/camion.middleware.js";
 
 const router: Router = Router();
 

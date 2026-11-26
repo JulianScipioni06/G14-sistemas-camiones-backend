@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { Op } from 'sequelize';
-import { Cliente } from '../models/cliente.model.js';
+import { Cliente } from '../models/Cliente.js';
 
 export const getClientes = async (req: Request, res: Response) => {
   try {

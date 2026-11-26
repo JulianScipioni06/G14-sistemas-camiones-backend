@@ -5,8 +5,8 @@ import {
     createGasto,
     updateGasto,
     deleteGasto,
-} from '../controllers/gastos.controller.js';
-import { validarCrearGasto } from '../middlewares/validarGasto.js';
+} from '../controllers/gasto.controller.js';
+import { validarCrearGasto } from '../middlewares/gasto.middleware.js';
 
 const router: Router = Router();
 

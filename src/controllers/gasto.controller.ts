@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { Op } from 'sequelize';
-import { Gasto } from '../models/gastos.model.js';
+import { Gasto } from '../models/Gasto.js';
 
 export const getGastos = async (req: Request, res: Response) => {
     try {

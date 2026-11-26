@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { Op } from 'sequelize';
-import { Ingreso } from '../models/ingresos.model.js';
+import { Ingreso } from '../models/Ingreso.js';
 
 export const getIngresos = async (req: Request, res: Response) => {
     try {

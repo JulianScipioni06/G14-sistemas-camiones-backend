@@ -5,7 +5,7 @@ export const validarId = (req: Request, res: Response, next: NextFunction) => {
 
     if(!Number.isInteger(id) || id <= 0){
         res.status(400).json({
-            msg: 'El id debe ser un enetero positivo',
+            msg: 'El id debe ser un entero positivo',
             code: 400,
         });
         return;

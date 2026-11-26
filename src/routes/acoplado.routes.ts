@@ -7,7 +7,7 @@ import {
     deleteAcoplado,
 } from '../controllers/acoplado.controller.js';
 import { validarId } from '../middlewares/validarId.js';
-import { validarAcoplado } from '../middlewares/validarAcoplado.js';
+import { validarAcoplado } from '../middlewares/acoplado.middleware.js';
 
 const router:Router = Router();
 

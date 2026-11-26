@@ -1,15 +1,15 @@
 import express, { type Express } from 'express';
 import cors from 'cors';
 import usuarioRoutes from './routes/usuario.routes.js';
-import choferRoutes from './routes/chofer.route.js';
-import ingresoRoutes from './routes/ingresos.route.js';
-import gastoRoutes from './routes/gastos.route.js';
+import choferRoutes from './routes/chofer.routes.js';
+import ingresoRoutes from './routes/ingreso.routes.js';
+import gastoRoutes from './routes/gasto.routes.js';
 import authRoutes from './routes/auth.routes.js';
 import viajeRoutes from './routes/viaje.routes.js';
-import camionRoute from './routes/camion.route.js';
-import clienteRoutes from './routes/cliente.route.js';
-import acopladoRoutes from './routes/acoplado.route.js';
-import reparacionRoute from './routes/reparacion.route.js';
+import camionRoute from './routes/camion.routes.js';
+import clienteRoutes from './routes/cliente.routes.js';
+import acopladoRoutes from './routes/acoplado.routes.js';
+import reparacionRoute from './routes/reparacion.routes.js';
 import incidenciaRoutes from './routes/incidencia.routes.js'
 
 const app: Express = express();

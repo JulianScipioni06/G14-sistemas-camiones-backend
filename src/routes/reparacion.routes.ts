@@ -7,7 +7,7 @@ import {
     deleteReparacion,
 } from '../controllers/reparacion.controller.js';
 import { validarId } from '../middlewares/validarId.js';
-import { validarReparacion } from '../middlewares/validarReparacion.js';
+import { validarReparacion } from '../middlewares/reparacion.middleware.js';
 
 const router:Router = Router();
 

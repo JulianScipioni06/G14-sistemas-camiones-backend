@@ -5,8 +5,8 @@ import {
     createIngreso,
     updateIngreso,
     deleteIngreso,
-} from '../controllers/ingresos.controller.js';
-import { validarCrearIngreso } from '../middlewares/validarIngreso.js';
+} from '../controllers/ingreso.controller.js';
+import { validarCrearIngreso } from '../middlewares/ingreso.middleware.js';
 
 const router: Router = Router();
 

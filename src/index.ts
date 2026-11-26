@@ -10,6 +10,7 @@ import './models/cliente.model.js';
 import './models/gastos.model.js';
 import './models/Reparacion.model.js';
 import './models/Acoplado.model.js';
+import './models/Incidencia.js'
 import { establecerCardinalidad } from './models/cardinalidades.model.js';
 
 establecerCardinalidad();

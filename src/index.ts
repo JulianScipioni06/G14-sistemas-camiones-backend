@@ -2,14 +2,14 @@ import dotenv from 'dotenv';
 import app from './app.js';
 import { sequelize } from './config/database.js';
 import './models/Usuario.js';
-import './models/chofer.model.js'
-import './models/ingresos.model.js';
+import './models/Chofer.js'
+import './models/Ingreso.js';
 import './models/Viaje.js';
-import './models/camion.models.js';
-import './models/cliente.model.js';
-import './models/gastos.model.js';
-import './models/Reparacion.model.js';
-import './models/Acoplado.model.js';
+import './models/Camion.js';
+import './models/Cliente.js';
+import './models/Gasto.js';
+import './models/Reparacion.js';
+import './models/Acoplado.js';
 import './models/Incidencia.js'
 import { establecerCardinalidad } from './models/cardinalidades.model.js';
 

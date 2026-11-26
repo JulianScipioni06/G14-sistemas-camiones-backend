@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { Op } from 'sequelize';
-import { Chofer } from '../models/chofer.model.js';
+import { Chofer } from '../models/Chofer.js';
 
 export const getChoferes = async (req: Request, res: Response) => {
   try {

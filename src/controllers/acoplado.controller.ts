@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { Op, UniqueConstraintError, ForeignKeyConstraintError } from 'sequelize';
-import { Acoplado } from '../models/Acoplado.model.js';
+import { Acoplado } from '../models/Acoplado.js';
 
 export const getAcoplados = async (req: Request, res: Response) => {
     try {

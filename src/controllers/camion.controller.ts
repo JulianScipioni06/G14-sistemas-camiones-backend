@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { Op, UniqueConstraintError, ForeignKeyConstraintError } from 'sequelize';
-import { Camion } from '../models/camion.models.js';
+import { Camion } from '../models/Camion.js';
 
 //Busqueda general Camiones
 export const getCamiones = async (req: Request, res: Response) => {

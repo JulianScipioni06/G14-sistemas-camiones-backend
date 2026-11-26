@@ -11,9 +11,8 @@ import './models/Gasto.js';
 import './models/Reparacion.js';
 import './models/Acoplado.js';
 import './models/Incidencia.js'
-import { establecerCardinalidad } from './models/cardinalidades.model.js';
+import './models/cardinalidades.model.js';
 
-establecerCardinalidad();
 dotenv.config();
 
 let port = 3000;

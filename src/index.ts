@@ -7,7 +7,10 @@ import './models/ingresos.model.js';
 import './models/camion.models.js';
 import './models/cliente.model.js';
 import './models/gastos.model.js';
+import './models/Acoplado.model.js';
+import { establecerCardinalidad } from './models/cardinalidades.model.js';
 
+establecerCardinalidad();
 dotenv.config();
 
 let port = 3000;

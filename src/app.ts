@@ -10,6 +10,7 @@ import camionRoute from './routes/camion.route.js';
 import clienteRoutes from './routes/cliente.route.js';
 import acopladoRoutes from './routes/acoplado.route.js';
 import reparacionRoute from './routes/reparacion.route.js';
+import incidenciaRoutes from './routes/incidencia.routes.js'
 
 const app: Express = express();
 
@@ -25,6 +26,7 @@ app.use('/api/v1/viajes', viajeRoutes);
 app.use('/api/v1/camiones', camionRoute);
 app.use('/api/v1/acoplados', acopladoRoutes);
 app.use('/api/v1/reparaciones', reparacionRoute);
+app.use('/api/v1/incidencias', incidenciaRoutes)
 
 app.use('/api/v1/clientes', clienteRoutes);
 

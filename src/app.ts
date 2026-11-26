@@ -8,6 +8,7 @@ import authRoutes from './routes/auth.routes.js';
 import camionRoute from './routes/camion.route.js';
 import clienteRoutes from './routes/cliente.route.js';
 import acopladoRoutes from './routes/acoplado.route.js';
+import reparacionRoute from './routes/reparacion.route.js';
 
 const app: Express = express();
 
@@ -21,6 +22,7 @@ app.use('/api/v1/gastos', gastoRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/camiones', camionRoute);
 app.use('/api/v1/acoplados', acopladoRoutes);
+app.use('/api/v1/reparaciones', reparacionRoute);
 
 app.use('/api/v1/clientes', clienteRoutes);
 
